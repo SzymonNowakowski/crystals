@@ -37,7 +37,8 @@ for full_path, file_md5 in files_with_md5:
     if file_md5 != last_md5:
         shutil.copy2(full_path, dest_dir)  # copy unique file with metadata (creation date, etc)
         last_md5 = file_md5
+        last_path = full_path
     else:
-        print(f"Duplicate found, skipping: {full_path}")
+        print(f"Duplicate of {last_path} skipped: {full_path}")
 
 print(f"Finished, unique pngs saved in: {dest_dir}")

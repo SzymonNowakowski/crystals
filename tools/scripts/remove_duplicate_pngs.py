@@ -1,4 +1,6 @@
 ### Author: Małgorzata Niemiec
+### Executed: 2025/12/17
+
 import os
 import hashlib
 import shutil
